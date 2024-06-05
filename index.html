@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Travel better™</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <div id="topBar">
+        <div id="item">
+          <img src="images/logo.png" width="190px" height="40px" id="home" onmouseover="hover();">
+          <div id="text">
+            <font style="margin-left: 10px; font-size: 14px;font-weight: 600;" id="insideText">Travel better™</font>
+          </div>
+          <div id="rightText">
+            <div id="rightTesting">
+              <font id="water" onclick="window.location.href='otherIndex/boat.html';">
+                Sea Cruise
+              </font>
+              <font id="hotel" onclick="window.location.href='../otherIndex/hotel.html';">
+                Hotel Accommodations
+              </font>
+            </div>
+          </div>
+        </div>
+    </div>
+  </center>
+
+  <center>
+    <div id="main">
+      <div id="selectBox">
+        <div id="selectFont">
+          <font style="color: #4f4f4f; font-size: 20px; align-self: center; margin: 10px;" id="SelectTopText">
+            We also have a special sea cruise and regular hotel accommodations in the top bar!
+          </font>
+        </div>
+        <div id="selection">
+          <div id="travel" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+            <div class="airplane" style="background-image: url('images/cruise.png'); width: 100%; height:100%; background-size: cover; background-position: 53% 50%;" onclick="del('boat', 0);">
+              <font>Cruise
+                <br>
+                <font style="color: white;">
+                  This is a sea cruise from LA to Hawaii
+                </font>
+              </font>
+            </div>
+            <div class="airplane" style="background-image: url('images/airplane.png'); width: 100%; height:100%; background-size: cover; background-position: 80% 30%;" onclick="del('airplane', 0);">
+              <font>Airplane
+                <br>
+                <font style="color: black;">
+                  Airfare is included from Orange County, LAX, San Francisco
+                </font>
+              </font>
+            </div>
+            <div class="airplane" style="background-image: url('images/hotel.png'); width: 100%; height:100%; background-size: cover; background-position: 70% 40%;" onclick="del('hotel', 0);">
+              <font>Hotel
+                <br>
+                <font>
+                  Hotels are sourced to our partner website, Expedia
+                </font>
+              </font>
+            </div>
+          </div>
+          <div id="selectDay" style="display: none;">
+            <div class="days" style="background-image: url('../images/bg-oahu.png'); height:100%; background-size: cover;" onclick="del('days', 4);">
+              <font>4 Days, 3 Nights
+                <br><br>
+                <font>
+                  1 island, <font class="pricePerson"></font> per person
+                </font>
+              </font>
+            </div>
+            <div class="days" style="background-image: url('../images/bg-oahu.png'); height:100%; background-size: cover;" onclick="del('days', 7);">
+              <font>7 Days, 6 Nights
+                <br><br>
+                <font>
+                  1-3 islands, <font class="pricePerson"></font> per person
+                </font>
+              </font>
+            </div>
+            <div class="days" style="background-image: url('../images/bg-oahu.png'); height:100%; background-size: cover;" onclick="del('days', 10);">
+              <font>10 Days, 10 Nights
+                <br><br>
+                <font>
+                  1-4 island, <font class="pricePerson"></font> per person
+                </font>
+              </font>
+            </div>
+          </div>
+          <div id="choiceIslands" style="display: none;">
+            <div class="choiceIsland" style="background-image: url('images/islandsImage.png'); height:100%; background-size: cover;" onclick="del('choiceIsland', 1);">
+              <font>1 island
+                <br><br>
+                <font class="resultIslandText">
+                  
+                </font>
+              </font>
+            </div>
+            <div class="choiceIsland" style="background-image: url('images/oahu2.png'); height:100%; background-size: cover;" onclick="del('choiceIsland', 2);">
+              <font>2 islands
+                <br><br>
+                <font class="resultIslandText">
+  
+                </font>
+              </font>
+            </div>
+            <div class="choiceIsland" style="background-image: url('images/islandsImage3.png'); height:100%; background-size: cover;" onclick="del('choiceIsland', 3);">
+              <font>3 islands
+                <br><br>
+                <font class="resultIslandText">
+  
+                </font>
+              </font>
+            </div>
+            <div class="choiceIsland" style="background-image: url('images/Kauai.png'); height:100%; background-size: cover;" onclick="del('choiceIsland', 4);">
+              <font>4 islands
+                <br><br>
+                <font class="resultIslandText">
+
+                </font>
+              </font>
+            </div>
+          </div>
+          <div id="resultText" style="display:none; text-align: left; cursor: auto">
+            <font id="response" style="text-align: left;">
+              &nbsp;&nbsp;&nbsp;&nbsp;Good choice, your <font class="air"></font> package will be <font id="days"></font> days long, you will go to <font id="countIsland"></font>, and the cost will be <font id="price"></font>. The <font class="air"></font>.
+            </font>
+            <br>
+            <font>
+              Pay here: 
+              <font id="sbodyText">
+                <form>
+                  <input type="text" size="32" placeholder="Enter the name on the card: "required><br>
+                  <input type="number" size="32" placeholder="Enter card number: "required><br>
+                  <input type="password" size="32" placeholder="Enter security code: "required><br>
+                  <br>
+                  <div id="short">
+                    <label for="month">Enter expiration date:</label>
+                    <input type="month" style="height: 120%;font-size: 115%;" required>
+                  </div>
+                  <div id="short" style="width: 30%;left: 1%;">
+                    <center>
+                      <select style="height: 120%;font-size: 105%;width: 100%;" name="help" id="selecthelp">
+                        <option value="">~~Please choose an option~~</option>
+                        <option value="visa">Visa</option>
+                        <option value="master">MasterCard</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </center>
+                  </div>
+                  <input type="text" size="32" placeholder="Enter billing adress: "required><br>
+                  <br>
+                  <input type="email" size="32" placeholder="Enter your email: " required><br>
+                  <textarea cols="55" rows="6" placeholder="Other comments: "></textarea><br>
+                  <center>
+                    <button id="button" onforminput="a">Submit</button>
+                  </center>
+                </form>
+              </font>
+            </font>
+          </div>
+          <div id="hotelText" style="display:none; cursor:auto;">
+            <div id="textHotel" style="z-index: 1; cursor: auto;">
+              <font style="color: black; font-size: 24px; font-weight: 600; cursor: auto;">We offer hotels at $125-350 per night</font>
+              <br style="cursor: auto;"><br style="cursor: auto;">
+              <div id="expediaButton" onclick="window.open('https://www.expedia.com/Destinations-In-Hawaii.d213.Hotel-Destinations');" style="cursor: pointer;">
+                <font style="opacity: 1; font-weight: 600;">Visit Our Partner Website</font>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- put form here -->
+          <!-- air(you can find our water and hotels in the top bar)  kinda done-->
+          <!-- how many days(tooltips will show other info) -->
+          <!-- if you can then give choice of how many islands with tooltips -->
+          <!-- final end screen with additional information -->
+        </div>
+      </div>
+      
+      <div id="remindBox">
+        <img src="images/LogoNoWord.png" width="50px" height="50px">
+        <div id="memberFont">
+          <font style="color: white; font-weight: 600; font-size: 20px; text-shadow: #232843 0.75px 0 10px;">
+            Join our membership program for 3% off all trips! Members also get an extra 1% discount at when they have flown over 50000 miles with us!
+          </font>
+        </div>
+        <div id="joinText">
+          <font style="color: white; font-weight: 600; font-size: 18px; text-shadow: #232843 0.75px 0 10px;">
+            Join us at (123)-456-7890 
+          </font>
+        </div>
+      </div>
+  
+      <div id="islands">
+        <div id="island" onclick="window.location.href='islandDisc/oahu.html';">
+          <img src="images/bg-oahu.png" id="islandImage" style="object-position: 42.5% 50%;">
+        </div>
+        <div id="island" onclick="window.location.href='islandDisc/maui.html';">
+          <img src="images/Maui.png" id="islandImage" style="object-position: 17.5% 50%;">
+        </div>
+        <div id="island" onclick="window.location.href='islandDisc/hawaii.html';">
+          <img src="images/Hawaii.png" id="islandImage">
+        </div>
+        <div id="island" onclick="window.location.href='islandDisc/kauai.html';">
+          <img src="images/Kauai.png" id="islandImage">
+        </div>
+      </div>
+      <div id="footer">
+        <font style="justify-self: left;">Made by George</font>
+        <font style="justify-self: right;">Made in web design class</font>
+        <font style="justify-self: left;">May 2024 All rights reserved</font>
+        <font style="justify-self: right;" onclick="window.location.href='../Contact/contact.html';" id="contact">Contact Us</font>
+      </div>
+    </div>
+  </center>
+
+  <script src="script.js">
+  </script>
+</body>
+
+</html>

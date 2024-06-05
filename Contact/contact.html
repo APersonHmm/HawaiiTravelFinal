@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Contact us</title>
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link href="../islandDisc/islands.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <div id="topBar">
+        <div id="item">
+          <img src="../images/logo.png" width="190px" height="40px" id="home" onmouseover="hover();">
+          <div id="text">
+            <font style="margin-left: 10px; font-size: 14px;font-weight: 600;" id="insideText">Travel better™</font>
+          </div>
+          <div id="rightText">
+            <div id="rightTesting">
+              <font id="water" onclick="window.location.href='../otherIndex/boat.html';">
+                Sea Cruise
+              </font>
+              <font id="hotel" onclick="window.location.href='../otherIndex/hotel.html';">
+                Hotel Accommodations
+              </font>
+            </div>
+          </div>
+        </div>
+    </div>
+  </center>
+
+  <center>
+    <div id="main">
+      <div id="islandsTopBox">
+        <img src="../images/LogoAir.webp" id="islandsImage">
+        <p></p>
+        <font id="islandsText">
+          <div style="margin: 15px;">
+            <font id="bodyText">
+            To send comments, please fill out the form here:
+            </font>
+            <br>
+            <font id="sbodyText">
+              <form>
+                <input type="text" size="32" placeholder="Enter your name: "required><br>
+                <div id="short">
+                  <input type="date" style="height: 120%;font-size: 115%;" required>
+                </div>
+                <div id="short" style="width: 30%;left: 1%;">
+                  <center>
+                    <select style="height: 120%;font-size: 105%;width: 100%;" name="help" id="selecthelp">
+                      <option value="">~~Please choose an option~~</option>
+                      <option value="question">Question</option>
+                      <option value="comment">Comment</option>
+                      <option value="info">Informative</option>
+                      <option value="help">Would like to help</option>
+                    </select>
+                  </center>
+
+                </div>
+                <br>
+                <input type="email" size="32" placeholder="Enter your email: " required><br>
+                <textarea style="margin-top: 6px;" cols="55" rows="2" placeholder="Enter the title: " required></textarea><br>
+                <textarea cols="55" rows="6" placeholder="Enter your message: " required></textarea><br>
+                <center>
+                  <button id="button" onforminput="a">Submit</button>
+                </center>
+
+              </form>
+            </font>
+          </div>
+</font>
+      </div>
+
+      <div id="footer">
+        <font style="justify-self: left;">Made by George</font>
+        <font style="justify-self: right;">Made in web design class</font>
+        <font style="justify-self: left;">May 2024 All rights reserved</font>
+        <font style="justify-self: right;" onclick="window.location.href='../Contact/contact.html';" id="contact">Contact Us</font>
+      </div>
+    </div>
+  </center>
+
+  <script src="../script.js">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font-size: 1vw;
+}
+
+#topBar {
+  display: flex;
+  flex: 1;
+
+  padding: 0px;
+  background-color: white;
+
+  border-bottom: 1px solid #ababab;
+  box-shadow: 0px 1px 5px #b5b5b5;
+  align-items: center;
+  justify-content: center;
+}
+
+#item {
+  display: flex;
+
+  width: 70vw;
+  margin: 10vw;
+  margin-top: 0.4vw;
+  margin-bottom: 0.4vw;
+  align-items: center;
+}
+
+#text {
+  display: flex;
+
+  font-size: 15px;
+  font-weight: 500;
+  font-family: arial;
+
+  flex-grow: 1;
+  flex-basis: 30%;
+}
+
+insideText {
+  flex-grow: 0;
+}
+
+#rightText {
+  display: flex;
+
+  font-size: 15px;
+  font-weight: 500;
+  font-family: arial;
+
+  flex-grow: 1;
+  flex-basis: 50%;
+  height: 40px;
+}
+
+#rightTesting {
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+#water {
+  float: right;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#hotel {
+  float: right;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* main */
+
+#main {
+  width: 70vw;
+}
+
+#remindBox {
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+  height: 40px;
+  background: radial-gradient(#232843, #545b83);
+  border-radius: 20px;
+  border: 1px solid #e3e3e3;
+
+  display: grid;
+  grid-template-columns: 5vw 50vw 1fr;
+  grid-template-rows: 40px;
+  align-items: center;
+  padding: 1vw;
+}
+
+#memberFont {
+  display: flex;
+  align-items: center;
+  width: 50vw;
+
+}
+
+#joinText {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  margin-left: 1vw;
+}
+
+/* selectbox */
+
+#selectBox {
+  margin-top: 2vw;
+  display: grid;
+  grid-template-rows: 45px 445px;
+  /* margin-bottom: 6vw; */
+}
+
+#selectFont {
+  background-color: white;
+  display: flex;
+  border-radius: 5px 5px 0px 0px;
+  border: solid 1px #d9d9d9;
+}
+
+#selection {
+  background-color: white;
+  border-radius: 0px 0px 5px 5px;
+  border-top: solid 0px #d9d9d9;
+  border-left: solid 1px #d9d9d9;
+  border-right: solid 1px #d9d9d9;
+  border-bottom: solid 1px #d9d9d9;
+}
+
+#selection:hover > div > div:hover{
+  animation: fadeOut 0.5s 1;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+#selection>div{
+  height: 100%;
+}
+
+#selectDay{
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#choiceIslands{
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.85;
+  }
+}
+
+#selection > div > div > font{
+  position: relative;
+  top: 82%;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #ffffff;
+}
+
+#resultText{
+  margin: 20px;
+}
+
+#result{
+  text-align: left;
+}
+
+#hotelText{
+  justify-content: center;
+}
+
+#textHotel{
+  align-self: center;
+}
+
+#expediaButton{
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  opacity: 1;
+}
+
+#expediaButton:hover{
+  animation: background 0.5s 1;
+  background-color: rgb(204, 213, 255, .3);
+}
+
+@keyframes background{
+  0%{
+    background-color: rgb(204, 213, 255, 0);
+  }
+  100%{
+    background-color: rgb(204, 213, 255, .3);
+  }
+}
+
+#hotelText{
+  position:relative;
+  display:block;
+  opacity: 1;
+}
+
+#hotelText::before{
+  content:"";
+  background-image: url('images/HotelRoom.png');
+  background-size: cover;
+  background-position: 55% 100%;
+  opacity:0.7;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  z-index:0;
+}
+
+/* #hotelText{
+  background: url("images/HotelRoom.png");
+} */
+
+/* Island Selection */
+
+#islands {
+  padding-top: 4vw;
+  display: grid;
+  height: 50vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 100px;
+  border-top: 1px solid #ababab;
+}
+
+#island {
+  width: 1fr;
+  height: 1fr;
+}
+
+#islandImage{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+#islandImage:hover{
+  width: 130%;
+  margin: 50px;
+  transform: scale(1.05,1);
+  cursor: pointer;
+}
+
+#footer{
+  display: grid;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  border-top: 1px solid #ababab;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#contact:hover{
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+a{
+  text-decoration-line: underline;
+  color: #000000;
+  font-weight: 600;
+}
+
+a:hover{
+  color: #787878;
+}
